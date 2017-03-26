@@ -1,14 +1,25 @@
 <template>
   <div class="wrapper">
     <input type="text" v-model="newName" />
-    <button v-on:click="create(newName)">Create</button>
+    <button v-on:click="createTodo()">Create</button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'new-item-form',
-  props: ['create', 'newName']
+  props: ['create'],
+  data () {
+    return {
+      newName: ''
+    }
+  },
+  methods: {
+    createTodo: function () {
+      this.create(this.newName)
+      this.newName = ''
+    }
+  }
 }
 </script>
 

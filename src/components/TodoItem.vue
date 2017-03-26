@@ -1,5 +1,5 @@
 <template>
-  <p>{{item.name}}</p>
+  <p>{{item.id}}: {{item.name}}</p>
 </template>
 
 <script>

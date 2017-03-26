@@ -2,10 +2,7 @@
   <div>
     <h1>Todo List</h1>
 
-    <new-item-form 
-      :newName="newName" 
-      :create="onCreate">
-    </new-item-form>
+    <new-item-form :create="onCreate"></new-item-form>
 
     <todo-item 
       v-for="todo in todos" 
@@ -31,8 +28,7 @@ export default {
         { id: 1, name: 'Study Vue' },
         { id: 2, name: 'Make something awesome!' }
       ],
-      index: 3,
-      newName: ''
+      index: 3
     }
   },
   methods: {
@@ -42,8 +38,6 @@ export default {
       this.todos.push({
         id: this.index++, name
       })
-
-      this.newName = ''
     }
   }
 }
