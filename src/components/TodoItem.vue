@@ -1,14 +1,13 @@
 <template>
-  <h1>Todo Page</h1>
+  <p>{{item.name}}</p>
 </template>
-
 
 <script>
 export default {
-  name: 'todo'
+  name: 'todo-item',
+  props: ['item']
 }
 </script>
-
 
 <style scoped>
 </style>
