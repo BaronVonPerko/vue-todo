@@ -2,6 +2,12 @@
   <div>
     <h1>Todo List</h1>
 
+    <a
+      href="#completed" 
+      v-if="completedItems.length > 0">
+      View Completed Items
+    </a>
+
     <new-item-form :create="onCreate"></new-item-form>
 
     <div class="items">
@@ -61,6 +67,15 @@ export default {
       return this.todos.filter(item => {
         return item.isDone === false
       })
+    },
+    completedItems () {
+      var list = this.todos.filter(item => {
+        return item.isDone === true
+      })
+
+      this.$router.completedItems = list
+
+      return list
     }
   }
 }
