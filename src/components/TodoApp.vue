@@ -11,6 +11,10 @@
         :onDone="onDone">
       </todo-item>
     </div>
+
+    <div v-if="itemsToDo.length === 0">
+      Nothing to do!
+    </div>
   </div>
 </template>
 
