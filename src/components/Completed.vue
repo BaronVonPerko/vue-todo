@@ -2,8 +2,12 @@
   <div class="container">
     <h1>Completed</h1>
 
-    <div v-for="item in items">
-      {{item.name}}
+    <a href="#todo">Go Back</a>
+
+    <div class="items">
+      <div v-for="item in items">
+        {{item.name}}
+      </div>
     </div>
   </div>
 </template>
@@ -20,4 +24,7 @@ export default {
 </script>
 
 <style scoped>
+.items {
+  margin: 50px 0;
+}
 </style>
